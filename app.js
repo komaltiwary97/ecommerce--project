@@ -1,18 +1,16 @@
-import express from 'express';
+import express, { application } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
 import initDB from './backend/config/db.js';
-import userRouter from './backend/routes/userRoutes.js';
+import userRoutes from './backend/routes/userRoutes.js'
 
 
 const app = express();
 app.use(cors());
 app.use(morgan('dev'));
-
 app.use(express.json());
 dotenv.config();
-// dotenv.config({ path: './config.env' });
 
 // it is going to connect your backend application to mongodb database
 initDB()
@@ -22,7 +20,7 @@ app.get("/api", (req, res) => (
     res.send("hello from node server")
 ));
 
-app.use("/api/users/",userRouter);
+app.use("/api/users/",userRoutes);
 
 const port = process.env.PORT || 8000;
 
