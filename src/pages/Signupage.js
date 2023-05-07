@@ -72,6 +72,7 @@ const Signuppage = () => {
           onChange={handleChange}>
           <MenuItem value={0}>User</MenuItem>
           <MenuItem value={1}>Admin</MenuItem>
+        
         </Select>
       </FormControl>
       </StyledBox>
