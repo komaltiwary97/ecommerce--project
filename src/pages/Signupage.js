@@ -1,7 +1,7 @@
 import React,{useState}from "react";
 import Header from "../component/Header";
 import { CardActions,CardContent,Button, FormControl,TextField,
-     Typography,Select,MenuItem,InputLabel } from "@mui/material";
+     Typography,MenuItem,Select,InputLabel } from "@mui/material";
 import { StyledCard, StyledDiv,StyledFormDiv,StyledBox } from "./Styled";
 import { useDispatch } from "react-redux";
 import { register } from "../action/userActions";
@@ -74,6 +74,7 @@ const Signuppage = () => {
           <MenuItem value={1}>Admin</MenuItem>
         
         </Select>
+        
       </FormControl>
       </StyledBox>
 
