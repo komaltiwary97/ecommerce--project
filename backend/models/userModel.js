@@ -25,7 +25,7 @@ const userSchema = mongoose.Schema({
         default: 0 
     },
     salt: String,
-    histort: {
+    history: {
         type: Array,
         dafault: []
     },
